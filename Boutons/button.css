@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: linear-gradient(158deg, #232121 0%, #2f2c2c 24%, #3a3434 51%, #423c3c 74%, #5a5151 89%, #756d75 100%);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    border: none;
+}
+
+/****************************************************************
+
+Liste des boutons (les class sont écrit sur les boutons en front)
+
+*****************************************************************/
+
+
+.simple{
+    background-color: hsl(0, 3%, 94%);
+    color: hsl(0, 1%, 29%);
+    border: 1px solid hsl(0, 1%, 29%);
+    border-radius: 8px; 
+}
+
+.simple:hover{
+    transition: 0.5s;
+    background-color: hsl(0, 1%, 29%);
+    color: hsl(0, 3%, 94%)
+}
+
+.simple:active{
+    background-color: hsl(0, 3%, 7%);
+    border: 1px solid hsl(0, 3%, 7%);
+}
+
+/******/
+
+.gradient{
+    background: linear-gradient(134deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+    border-radius: 10px;
+    color: hsl(0, 3%, 94%);
+    
+}
+
+.gradient:hover{
+    animation: gradient 0.5s ease 0s 1 normal forwards;
+}
+    
+@keyframes gradient {
+        0% {
+            background: linear-gradient(134deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+        10%{
+            background: linear-gradient(144deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        20%{
+            background: linear-gradient(154deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        30%{
+            background: linear-gradient(164deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        40%{
+            background: linear-gradient(174deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+        50% {
+            background: linear-gradient(184deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        60% {
+            background: linear-gradient(194deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+        70%{
+            background: linear-gradient(204deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        80%{
+            background: linear-gradient(214deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        90%{
+            background: linear-gradient(224deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+
+        100%{
+            background: linear-gradient(234deg, hsl(37, 83%, 56%) 0%, hsl(327, 69%, 43%) 100%);
+        }
+      }
+
+/******/
+
+.three{
+    cursor: pointer;
+    font-family: var(--font_title);
+    border-radius: 10px;
+    background-color: hsl(224, 78%, 52%);
+    border: none;
+    border: solid hsl(224, 78%, 52%);
+    box-shadow: 0 6px hsl(224, 75%, 38%);
+    position: relative;
+    color: hsl(0, 3%, 94%);
+}
+
+.three:hover{
+    box-shadow: 0 4px hsl(224, 75%, 38%);;
+    top: 2px;
+}
+
+.three:active{
+    box-shadow: 0 0 hsl(224, 75%, 38%);;
+    top: 6px;
+}
+
+/******/
+
+.fade{
+    border-radius: 5px;
+    background-color: hsl(133, 53%, 63%);
+    color: hsl(0, 3%, 94%);
+}
+
+.fade:hover{
+    background-color: hsl(133, 42%, 55%);
+}
+
+.fade:active{
+    animation: fade 2s ease 0s 1 normal forwards;
+}
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /******/
+
+  .spooky{
+      border-radius: 5px;
+      background-color: hsl(0, 53%, 49%);
+      color: hsl(0, 3%, 94%);
+  }
+
+  .spooky:hover{
+    animation: spooky 250ms ease 0s infinite alternate-reverse both;
+    
+  }
+
+  @keyframes spooky {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, 2px);
+    }
+  
+    80% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .spooky:active{
+      background-color: hsl(0, 63%, 40%);
+  }
+
+  /******/
+
+  .warning{
+      border-radius: 5px;
+      background-color: hsl(24, 79%, 45%);
+      color: hsl(0, 3%, 94%);
+  }
+
+  .warning:hover{
+    animation: warning 2s ease 0s infinite normal backwards;
+  }
+
+  @keyframes warning {
+    0%,
+    50%,
+    100% {
+        background-color: hsl(24, 79%, 45%);
+    }
+  
+    25%,
+    75% {
+        background-color: hsl(7, 79%, 45%);
+    }
+  }
+
+  /******/
+
+
